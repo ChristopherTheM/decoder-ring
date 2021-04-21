@@ -38,7 +38,7 @@ describe("polybius()", () => {
     });
     it("Should return false if the length of all numbers is odd.", () => {
       const actual = polybius("1112131425262", false);
-      expect(actual).to.be.false;
+      expect(actual).to.equal(false);
     });
   });
 });

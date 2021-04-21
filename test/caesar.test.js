@@ -6,15 +6,15 @@ describe("caesar()", () => {
   describe("error handling", () => {
     it("Should return false if the shift amount is 0.", () => {
       const zero = caesar("Thinkful", 0);
-      expect(zero).to.be.false;
+      expect(zero).to.equal(false);
     });
     it("Should return false if the shift amount is above 25.", () => {
       const above = caesar("Thinkful", 26);
-      expect(above).to.be.false;
+      expect(above).to.equal(false);
     });
     it("Should return false if the shift amount is less than -25", () => {
       const below = caesar("Thinkful", -35);
-      expect(below).to.be.false;
+      expect(below).to.equal(false);
     });
   });
   describe("encoding a message", () => {

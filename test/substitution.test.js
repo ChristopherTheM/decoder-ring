@@ -6,25 +6,25 @@ describe("substitution()", () => {
   describe("error handling", () => {
     it("Should return false if the substitution alphabet is missing.", () => {
       const actual = substitution("message");
-      expect(actual).to.be.false;
+      expect(actual).to.equal(false);
     });
     it("should return false if the substitution alphabet is not exactly 26 characters", () => {
       const message = "message";
       const alphabet = "short";
       const actual = substitution(message, alphabet);
-      expect(actual).to.be.false;
+      expect(actual).to.equal(false);
     });
     it("should return false if the substitution alphabet does not contain unique characters", () => {
       const message = "message";
       const alphabet = "alskdjfhgalskdjfhgalskdjf";
       const actual = substitution(message, alphabet);
-      expect(actual).to.be.false;
+      expect(actual).to.equal(false);
     });
   });
   describe("encoding a message", () => {
     it("Should encode a message by using the given substitution alphabet.", () => {
       const expected = "ykrrpik";
-      const actual = substitution("message", "pqwokgiutsalyedjfhrmznxbcv");
+      const actual = substitution("message", "plmoknijbuhvygctfxrdzeswaq");
       expect(actual).to.equal(expected);
     });
     it("Should work with any kind of key with unique characters.", () => {
